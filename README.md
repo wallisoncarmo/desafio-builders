@@ -51,6 +51,7 @@ Logo após o gateway. Este módulo faz a ponte entre o frontend e os microservic
 
 Para iniciar o gateway fora da IDE, basta executar o comando abaixo dentro da pasta gateway:
 
+    mvn spring-boot:run
 
 ### Client-Service
 
