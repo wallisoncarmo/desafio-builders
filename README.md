@@ -60,14 +60,6 @@ Para iniciar o serviço client-service fora da IDE, basta executar o comando aba
  
     mvn spring-boot:run
 
-### Client-Service
-
-O ultimo módulo a ser iniciado é o gateway. Este módulo faz a ponte entre o frontend e os microservices no backend.
-
-Para iniciar o gateway fora da IDE, basta executar o comando abaixo dentro da pasta gateway:
- 
-    mvn spring-boot:run
-
 ## Configurações dos projetos nas IDEs
 
 Este projeto é um projeto Maven. Com isso, o processo de configuração dele é o padrão de qualquer projeto maven.
