@@ -52,7 +52,7 @@ Logo após o gateway. Este módulo faz a ponte entre o frontend e os microservic
 Para iniciar o gateway fora da IDE, basta executar o comando abaixo dentro da pasta gateway:
 
 
-### Gateway
+### Client-Service
 
 Após iniciar o gateway e discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de clientes.
 
