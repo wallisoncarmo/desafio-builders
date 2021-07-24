@@ -1,7 +1,7 @@
 package com.microservice.client.resources;
 
-import com.microservice.client.services.dto.ClientDTO;
 import com.microservice.client.services.ClientService;
+import com.microservice.client.services.dto.ClientDTO;
 import com.microservice.client.services.dto.FilterClientDTO;
 import io.swagger.annotations.ApiOperation;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -12,7 +12,6 @@ import org.springframework.web.servlet.support.ServletUriComponentsBuilder;
 
 import javax.validation.Valid;
 import java.net.URI;
-import java.util.List;
 
 @RestController
 @RequestMapping(value = "/client")

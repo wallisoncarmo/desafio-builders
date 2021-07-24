@@ -10,6 +10,8 @@ import java.util.Objects;
 public class ClientSpecifications {
 
 
+    public static final String ADDRESS = "address";
+
     private ClientSpecifications() {
 
     }
@@ -23,43 +25,42 @@ public class ClientSpecifications {
     }
 
     public final static Specification<Client> equalsCpf(String cpf) {
-
         return (root, query, builder) -> builder.equal(root.get("cpf"), cpf);
     }
 
     public final static Specification<Client> equalsCep(String cep) {
-        return (root, query, builder) -> builder.equal(root.get("address").get("cep"), cep);
+        return (root, query, builder) -> builder.equal(root.get(ADDRESS).get("cep"), cep);
     }
 
     public final static Specification<Client> likePublicPlace(String publicPlace) {
         return (root, query, builder) -> {
-            builder.lower(root.get("address").get("publicPlace"));
-            return builder.like(root.get("address").get("publicPlace"), "%" + publicPlace.toLowerCase() + "%");
+            builder.lower(root.get(ADDRESS).get("publicPlace"));
+            return builder.like(root.get(ADDRESS).get("publicPlace"), "%" + publicPlace.toLowerCase() + "%");
         };
     }
 
     public final static Specification<Client> likeNeighborhood(String neighborhood) {
         return (root, query, builder) -> {
-            builder.lower(root.get("address").get("neighborhood"));
-            return builder.like(root.get("address").get("neighborhood"), "%" + neighborhood.toLowerCase() + "%");
+            builder.lower(root.get(ADDRESS).get("neighborhood"));
+            return builder.like(root.get(ADDRESS).get("neighborhood"), "%" + neighborhood.toLowerCase() + "%");
         };
     }
 
     public final static Specification<Client> likeCity(String city) {
         return (root, query, builder) -> {
-            builder.lower(root.get("address").get("city"));
-            return builder.like(root.get("address").get("city"), "%" + city.toLowerCase() + "%");
+            builder.lower(root.get(ADDRESS).get("city"));
+            return builder.like(root.get(ADDRESS).get("city"), "%" + city.toLowerCase() + "%");
         };
     }
 
     public final static Specification<Client> equalsUF(UF uf) {
-        return (root, query, builder) -> builder.equal(root.get("address").get("uf"), uf);
+        return (root, query, builder) -> builder.equal(root.get(ADDRESS).get("uf"), uf);
     }
 
     public final static Specification<Client> likeComplement(String complement) {
         return (root, query, builder) -> {
-            builder.lower(root.get("address").get("complement"));
-            return builder.like(root.get("address").get("complement"), "%" + complement.toLowerCase() + "%");
+            builder.lower(root.get(ADDRESS).get("complement"));
+            return builder.like(root.get(ADDRESS).get("complement"), "%" + complement.toLowerCase() + "%");
         };
     }
 
