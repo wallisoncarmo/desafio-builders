@@ -46,7 +46,7 @@ Para iniciar o discovery fora da IDE, basta executar o comando abaixo dentro da 
 
 ### Client-Service
 
-Logo após o discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de comércios.
+Logo após o discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de clientes.
 
 Para iniciar o serviço client-service fora da IDE, basta executar o comando abaixo dentro da pasta client-service:
  
