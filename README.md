@@ -44,11 +44,11 @@ Para iniciar o discovery fora da IDE, basta executar o comando abaixo dentro da 
  
     mvn spring-boot:run
 
-### Trade-Service
+### Client-Service
 
-Logo após o discovery já é possível iniciar o modulo principal o Trade-Service. Este módulo contém o crud de comércios.
+Logo após o discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de comércios.
 
-Para iniciar o serviço trade-service fora da IDE, basta executar o comando abaixo dentro da pasta trade-service:
+Para iniciar o serviço client-service fora da IDE, basta executar o comando abaixo dentro da pasta client-service:
  
     mvn spring-boot:run
 
