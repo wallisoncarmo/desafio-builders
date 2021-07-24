@@ -44,9 +44,17 @@ Para iniciar o discovery fora da IDE, basta executar o comando abaixo dentro da 
  
     mvn spring-boot:run
 
+
+### Gateway
+
+Logo após o gateway. Este módulo faz a ponte entre o frontend e os microservices no backend.
+
+Para iniciar o gateway fora da IDE, basta executar o comando abaixo dentro da pasta gateway:
+
+
 ### Client-Service
 
-Logo após o discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de clientes.
+Após iniciar o gateway e discovery já é possível iniciar o modulo principal o Client-Service. Este módulo contém o crud de clientes.
 
 Para iniciar o serviço client-service fora da IDE, basta executar o comando abaixo dentro da pasta client-service:
  
