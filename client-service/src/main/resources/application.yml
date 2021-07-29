@@ -2,15 +2,13 @@ spring:
   application:
     name: client-service
   profiles:
-    active: test
-
+    active: local
 server:
-  port: 8082
+  port: ${PORT:0}
 
 eureka:
   instance:
+    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     prefer-ip-address: true
-  client:
-    service-url:
-      defaultZone: http://localhost:8081/eureka/
     register-with-eureka: true
+
