@@ -38,7 +38,7 @@ Para importar as dependencias basta ir no pacote principal e rodar o comando aba
 
 Deve ser o primeiro módulo a ser iniciado. Este módulo que registra os microservices ativos, para acessar a lista de serviços registrado acesse 
 
-    http://localhost:8081
+    http://localhost:8761
 
 Para iniciar o discovery fora da IDE, basta executar o comando abaixo dentro da pasta discovery:
  
@@ -71,6 +71,23 @@ Os demais detalhes de configurações fica a critério de cada IDE utilizada.
 
 ## Swagger
 
-O projeto possui uma documentação para o serviço de comércio para acessar basta acessar a url abaixo
+O projeto possui uma documentação para acessar basta acessar a url abaixo
 
-    http://localhost:8082/swagger-ui.html#/
+    http://localhost:${porta-servico-client}/swagger-ui.html#/
+    
+    OBS: ${porta-servico-client} é a porta que o serviço, para verificar qual porta basta acessar o console.
+
+
+## Docker
+Caso queira é possível subir aplicação com um container do docker para isso é necessário que tenha instalado previamente o docker e docker-compose na sua maquina, após isso vá para pasta raiz do projeto.
+
+Inicie a aplicação via docker-compose:
+
+    docker-compose -f docker-compose-desafio-builders.yml up -d
+
+Depois aguarde até que todos os serviços estejam em pé.
+
+## Postman
+Dentro de client-service tem uma coleção dos serviços utilizados.
+
+    src/main/postman/client-service.postman_collection.json
