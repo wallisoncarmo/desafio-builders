@@ -73,10 +73,7 @@ Os demais detalhes de configurações fica a critério de cada IDE utilizada.
 
 O projeto possui uma documentação para acessar basta acessar a url abaixo
 
-    http://localhost:${porta-servico-client}/swagger-ui.html#/
-    
-    OBS: ${porta-servico-client} é a porta que o serviço, para verificar qual porta basta acessar o console.
-
+    http://localhost:8082/swagger-ui.html#/
 
 ## Docker
 Caso queira é possível subir aplicação com um container do docker para isso é necessário que tenha instalado previamente o docker e docker-compose na sua maquina, após isso vá para pasta raiz do projeto.
