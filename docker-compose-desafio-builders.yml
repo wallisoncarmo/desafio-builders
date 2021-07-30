@@ -1,4 +1,4 @@
-version: '1'
+version: '2.0'
 services:
   discovery-builders:
     image: wallisoncarmo/discovery-builder:v2
@@ -6,7 +6,10 @@ services:
     ports:
       - 8761:8761
   client-service:
-    image: wallisoncarmo/client-service-builders:v1
+    image: wallisoncarmo/client-service-builders:v2
+    container_name: client-service-builders
+    ports:
+      - 8082:8082
     environment:
       - "SPRING_PROFILES_ACTIVE=dev"
     depends_on:
@@ -14,10 +17,6 @@ services:
         condition: service_started
       client-postgresql:
         condition: service_started
-  client-postgresql:
-    extends:
-      file: client-service/src/main/docker/postgres.yml
-      service: client-postgresql
   gateway-builders:
     image: wallisoncarmo/gateway-builders:v2
     container_name: gateway-builders
@@ -27,4 +26,13 @@ services:
       - "SPRING_PROFILES_ACTIVE=dev"
     depends_on:
       client-service:
-        condition: service_started
+        condition: service_started        
+  client-postgresql:
+    image: postgres:12-alpine
+    container_name: bd-desafio-builders-pg12
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=dbbuilders-client
+    ports:
+      - 5432:5432    

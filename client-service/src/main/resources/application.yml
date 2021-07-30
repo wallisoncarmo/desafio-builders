@@ -4,11 +4,9 @@ spring:
   profiles:
     active: local
 server:
-  port: ${PORT:0}
+  port: 8082
 
 eureka:
   instance:
-    instance-id: ${spring.application.name}:${spring.application.instance_id:${random.value}}
     prefer-ip-address: true
     register-with-eureka: true
-
