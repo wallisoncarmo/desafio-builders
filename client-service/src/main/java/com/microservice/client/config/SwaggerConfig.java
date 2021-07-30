@@ -50,10 +50,10 @@ public class SwaggerConfig {
 	}
 	
 	private ApiInfo apiInfo() {
-		return new ApiInfo("Arquitetura básica para microservice",
-				"Arquitetura básica para um micro serviço feito em spring.", "Versão 1.0",
-				"https://github.com/wallisoncarmo/base-microservice",
-				new Contact("Wallison do Carmo Costa", "https://github.com/wallisoncarmo/base-microservice", "wallisoncarmo01@gmail.com"),
+		return new ApiInfo("Desafio Builders, micro serviço com crud para clientes",
+				"Arquitetura básica para um microserviço feito em spring.", "Versão 1.0",
+				"https://github.com/wallisoncarmo/desafio-builders",
+				new Contact("Wallison do Carmo Costa", "https://github.com/wallisoncarmo/desafio-builders", "wallisoncarmo01@gmail.com"),
 				null, 
 				null, Collections.emptyList() // Vendor Extensions
 		);
