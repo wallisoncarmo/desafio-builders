@@ -6,7 +6,7 @@ services:
     ports:
       - 8761:8761
   client-service:
-    image: wallisoncarmo/client-service-builders:v2
+    image: wallisoncarmo/client-service-builders:v3
     container_name: client-service-builders
     ports:
       - 8082:8082
